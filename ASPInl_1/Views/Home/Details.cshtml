@@ -1,0 +1,9 @@
+﻿@model ASPMVC.Models.ProductModel
+
+<div class="card" style="width: 27rem;">
+  <div class="card-body">
+    <h5 class="card-title">@Html.DisplayFor(m => m.Name)</h5>
+     <p class="card-text">Pris: @Html.DisplayFor(m => m.Price)</p>
+    <p class="card-text">@Html.DisplayFor(m => m.Description)</p>
+  </div>
+</div>

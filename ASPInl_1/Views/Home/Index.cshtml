@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ASPInl_1.Areas.Identity.Data
+@inject UserManager<AppUser> UserManager
+
+@model IEnumerable<ASPMVC.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+    <div class="row">
+@foreach(var p in Model)
+{
+<div class="card" style="width: 18rem;">
+    <a class="stretched-link" asp-action="Details" asp-route-id="@p.Id"></a>
+  <div class="card-body">
+    <h5 class="card-title">@Html.DisplayFor(m => p.Name)</h5>
+     <p class="card-text">Pris: @Html.DisplayFor(m => p.Price)</p>
+    <p class="card-text">@Html.DisplayFor(m => p.Description)</p>
+  </div>
+</div>
+} 
+</div>
